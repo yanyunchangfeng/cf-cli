@@ -14,7 +14,12 @@
   "author": "yanyunchangfeng <yanyunchangfeng@gmail.com> (https://github.com/yanyunchangfeng)",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.26.1",
     "chalk": "4.1.0",
-    "commander": "^9.1.0"
+    "commander": "^9.1.0",
+    "download-git-repo": "^3.0.2",
+    "fs-extra": "^10.1.0",
+    "inquirer": "^8.2.2",
+    "ora": "5.4.0"
   }
 }

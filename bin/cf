@@ -17,7 +17,8 @@ program.command('create <app-name>')
     .description('create a new project')
     .option('-f, --force', 'overwrite target directory if it exists')
     .action((name, cmd) => {
-        console.log(name, cmd) // 我需要提取这个cmd的属性  eg cf create ff --force    name:ff cmd:{force:true}
+        // console.log(name, cmd) // 我需要提取这个cmd的属性  eg cf create ff --force    name:ff cmd:{force:true}
+        require('../lib/create')(name, cmd)
     })
 // 配置文件中
 program.command('config [value]')
@@ -26,18 +27,20 @@ program.command('config [value]')
     .option('-s, --set <path> <value>')
     .option('-d, --delete <path>', 'delete option from config')
     .action((value, cmd) => {
-        console.log(value, cmd)  // cf config -s a 1    value:1 cmd:{set:'a'}
+        // console.log(value, cmd)  // cf config -s a 1    value:1 cmd:{set:'a'}
+
     })
 program.command('ui')
     .description('start and open cf-cli ui')
     .option('-p, --port <port>', 'Port used for the UI Server')
     .action((cmd) => {
-        console.log(cmd)
+        // console.log(cmd)
     })
 program.on('--help', () => {
     console.log()
     // console.log(` Run cf-cli <command> --help show details`)
     console.log(` Run ${chalk.cyan(`cf-cli <command> --help`)} show details`)
+    console.log()
 })
 
 program
