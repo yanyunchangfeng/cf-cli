@@ -4,6 +4,7 @@
 
 
 // 1) 配置可执行命令 commander
+// console.log(process.argv, 'process.argv')
 const program = require('commander');
 const chalk = require('chalk')
 // 核心功能 1.创建项目 2.更改配置文件 3.ui界面 @vue/ui
@@ -39,7 +40,7 @@ program.command('ui')
 program.on('--help', () => {
     console.log()
     // console.log(` Run cf-cli <command> --help show details`)
-    console.log(` Run ${chalk.cyan(`cf-cli <command> --help`)} show details`)
+    console.log(` Run ${chalk.cyan(`cf-cli/cf <command> --help`)} show details`)
     console.log()
 })
 
@@ -48,6 +49,7 @@ program
     .usage('<command> [option]')
 // 解析用户执行命令传入的参数
 program.parse(process.argv)
+
 // 2). 我们要实现脚手架 先做一个命令行交互的功能 inquirer
 // 3). 将模版下载下来 download-git-repo
 // 4). 根据用户的选择动态的生成内容 metalsmith

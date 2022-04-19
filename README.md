@@ -13,6 +13,15 @@
 [note](./note.md)  
 [cli bin ](./bin/cf)
 
+## 安装和使用
+
+```
+ npm i yycf-cli -g or yarn global add yycf-cli
+
+ cf/cf-cli create newItem 
+ 
+```
+
 ## 我的个人博客
 
 - [燕云长风](https://yanyunchangfeng.github.io)
